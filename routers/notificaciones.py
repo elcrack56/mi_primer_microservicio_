@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from models.notificacion import Notificacion
-from db import coleccion
+from services.db import coleccion
 from bson import ObjectId
 
 router = APIRouter()

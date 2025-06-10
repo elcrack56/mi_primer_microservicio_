@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request, Form
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse, RedirectResponse
-from routes import notificaciones
+from routers import notificaciones
 from services.db import coleccion
 from models.notificacion import Notificacion
 
@@ -32,3 +32,6 @@ async def enviar_formulario(
     await coleccion.insert_one(notificacion.dict())
     return RedirectResponse(url="/", status_code=303)
 
+@app.get("/health")
+async def health_check():
+    return {"status": "ok"}
