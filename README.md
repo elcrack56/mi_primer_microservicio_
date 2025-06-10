@@ -47,6 +47,10 @@ docker-compose up --build
 
 http://localhost:8000
 
+## URL para ver el estado de la app
+
+http://localhost:8000/health
+
 ## Las notificaciones Mongo DB
 
 Las notificaciones enviadas se almacenan en la colección notificaciones en MongoDB.
