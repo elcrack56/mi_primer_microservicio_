@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install --no-cache-dir fastapi uvicorn motor
+RUN pip install --no-cache-dir fastapi uvicorn motor jinja2 aiofiles python-multipart
 
 EXPOSE 8000
 
